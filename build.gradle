@@ -8,12 +8,15 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'org.mockito:mockito-core:2.7.22'
+    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.7'
     implementation 'org.postgresql:postgresql:42.2.16.jre7'
     compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
     //    implementation 'org.postgresql:postgresql:42.2.12'
