@@ -1,4 +1,4 @@
-#BANKING System
+# BANKING System
 
 This abstract system manages bank accounts with credit cards.
 Project was created with the Gradle build framework and its main goal was to become a flexible OOP system with a database connection.
@@ -10,7 +10,7 @@ Project was created with the Gradle build framework and its main goal was to bec
 - Gradle
 - Junit and Mockito
 
-#Description
+# Description
 The main functionalities are creating, storing and retrieving account information.
 
 Creating account is connected with creating a proper card number with the Luhn's algorithm and a random PIN.
@@ -27,7 +27,7 @@ At the same time, this solution doesn't satisfy me and I  think I would like to 
 Currently user is able to create a new account and login into it with given credentials.
 
 
-#Possible upgrades
+# Possible upgrades
 - Upgrading functionalities
 - Better system security
 - Use of a Spring and its benefits like a dependency injection and DB API
