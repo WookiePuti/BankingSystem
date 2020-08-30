@@ -2,7 +2,7 @@
 
 This abstract system manages bank accounts with credit cards.
 Project was created with the Gradle build framework and its main goal was to become a flexible OOP system with a database connection.
-#Used technologies
+# Used technologies
 - Docker
 - Postgresql
 - Flyway DB migration
