@@ -1,4 +1,4 @@
-package datasources;
+package dao;
 
 import backend.Account;
 import backend.CardConfig;
@@ -30,10 +30,9 @@ public class DataFakeService implements IDataService {
 
     @Override
     public Optional<Account> getAccountByCredentials(String cardNumber, String password) {
-        Optional<Account> matchedAccount =  accounts.stream()
+        return accounts.stream()
                 .filter(account -> account.matchCredentials(cardNumber, password))
                 .findFirst();
-        return matchedAccount;
     }
 
     @Override

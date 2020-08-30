@@ -1,0 +1,6 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgres://localhost:5433/spring_banking_db
+    username: postgres
+    password: start
+    pool-size: 30

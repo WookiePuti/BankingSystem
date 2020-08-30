@@ -1,7 +1,10 @@
 package backend;
 
-import datasources.DataFakeService;
-import datasources.IDataService;
+import dao.DataFakeService;
+import dao.DataPostgresService;
+import dao.IDataService;
+import datasources.IDataSource;
+import datasources.PostgresDataSource;
 
 import java.util.Optional;
 
@@ -11,13 +14,15 @@ public class BankService implements IBankService {
     private final IDataService dataService;
     private final IPasswordGenerator passwordGenerator;
     private final ICreditCardGenerator creditCardNumberGenerator;
+    private IDataSource dataSource;
 
     public BankService() {
         loginService = new LoginService();
         createAccountService = new CreateAccountService();
-        dataService = new DataFakeService();
-         passwordGenerator = new PasswordGenerator();
-         creditCardNumberGenerator = new CreditCardNumberGenerator(new CheckSumGenerator());
+        dataSource = new PostgresDataSource();
+        dataService = new DataPostgresService(dataSource);
+        passwordGenerator = new PasswordGenerator();
+        creditCardNumberGenerator = new CreditCardNumberGenerator(new CheckSumGenerator());
     }
 
     @Override

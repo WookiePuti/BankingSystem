@@ -12,4 +12,12 @@ public class CreditCard {
     public boolean matchCredentials(String cardNumber, String password) {
         return cardNumber.equals(this.cardNumber) && password.equals(passwordPIN);
     }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public String getPasswordPIN() {
+        return passwordPIN;
+    }
 }

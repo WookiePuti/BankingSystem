@@ -1,6 +1,6 @@
 package backend;
 
-import datasources.IDataService;
+import dao.IDataService;
 
 public interface ICreateAccount {
     void createAccount(CreditCard newCreditCard, IDataService dataService);
