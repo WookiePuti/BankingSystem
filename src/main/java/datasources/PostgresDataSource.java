@@ -38,4 +38,27 @@ public class PostgresDataSource implements IDataSource{
         }
 
     }
+
+    @Override
+    public ResultSet executeReturnQuery(String inStatement) {
+        Connection conn = null;
+        try {
+            conn = connect();
+            Statement statement = conn.createStatement();
+            return statement.executeQuery(inStatement);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            conn.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+        return null;
+
+    }
 }
